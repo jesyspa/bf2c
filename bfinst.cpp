@@ -68,7 +68,7 @@ std::string BFInst::toC() const {
 				ss << "*ptr += " << count << ';';
 				return ss.str();
 			} else {
-				ss << "*ptr -= " << count << ';';
+				ss << "*ptr -= " << -count << ';';
 				return ss.str();
 			}
 		case output:

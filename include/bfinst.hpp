@@ -1,5 +1,5 @@
-#ifndef BF2C_INST_HPP
-#define BF2C_INST_HPP
+#ifndef BF2C_BFINST_HPP
+#define BF2C_BFINST_HPP
 #include <string>
 	
 //! \brief An object of this class holds a single brainfuck instruction, and
@@ -35,4 +35,4 @@ class BFInst {
 	int count;
 };
 
-#endif // BF2C_INST_HPP
+#endif // BF2C_BFINST_HPP
