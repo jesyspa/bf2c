@@ -1,0 +1,7 @@
+After receiving a challenge to figure out what some code does, I decided to
+write a brainfuck to C translator, not wanting to trouble my precious brain
+with thinking.  While this has so far not given me the answer, I still have
+hope that with a few more readability optimisations, it will become obvious.
+
+Chances are that this project will end up abandoned, and I'll instead help
+an existing BF2C group.

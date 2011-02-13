@@ -17,7 +17,7 @@ class BFInstList {
 	//! list.
 	std::string toC();
     private:
-	std::vector<BFInst> instlist;
+	std::vector<BFInst> instvec;
 	unsigned int startindent;
 	unsigned int lastindent;
 };

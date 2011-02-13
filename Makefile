@@ -1,4 +1,4 @@
-CXX = clang++ -Wall -Wextra -Winline -W -Wwrite-strings -pedantic
+CXX = clang++ -Wall -Wextra -Winline -W -Wwrite-strings -pedantic -Iinclude/
 
 bfinst.o : bfinst.cpp bfinst.hpp
 	${CXX} -c -o bfinst.o bfinst.cpp

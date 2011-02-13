@@ -8,29 +8,29 @@ BFInstList::BFInstList() {
 }
 
 void BFInstList::push( char c ) {
-	if( !instlist.empty() ) {
+	if( !instvec.empty() ) {
 		switch( c ) {
 			case '>':
-				if( instlist.back().type == BFInst::move ) {
-					++instlist.back();
+				if( instvec.back().type == BFInst::move ) {
+					++instvec.back();
 					return;
 				}
 				break;
 			case '<':
-				if( instlist.back().type == BFInst::move ) {
-					--instlist.back();
+				if( instvec.back().type == BFInst::move ) {
+					--instvec.back();
 					return;
 				}
 				break;
 			case '+':
-				if( instlist.back().type == BFInst::add ) {
-					++instlist.back();
+				if( instvec.back().type == BFInst::add ) {
+					++instvec.back();
 					return;
 				}
 				break;
 			case '-':
-				if( instlist.back().type == BFInst::add ) {
-					--instlist.back();
+				if( instvec.back().type == BFInst::add ) {
+					--instvec.back();
 					return;
 				}
 				break;
@@ -50,14 +50,14 @@ void BFInstList::push( char c ) {
 				return;
 		}
 	}
-	instlist.push_back(BFInst(c));
+	instvec.push_back(BFInst(c));
 }
 
 std::string BFInstList::toC() {
 	std::stringstream ss;
 	std::vector<BFInst>::const_iterator it;
 	unsigned int indent = startindent;
-	for( it = instlist.begin(); it < instlist.end(); ++it ) {
+	for( it = instvec.begin(); it < instvec.end(); ++it ) {
 		if( it->type == BFInst::loopend )
 			indent--;
 		for( unsigned int i = 0; i < indent; ++i ) {
