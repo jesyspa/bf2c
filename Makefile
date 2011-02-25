@@ -8,6 +8,8 @@ bfinstlist.o : bfinstlist.cpp include/bfinstlist.hpp include/bfinst.hpp
 	${CXX} -c -o bfinstlist.o bfinstlist.cpp
 bfreadfile.o : bfreadfile.cpp include/bfreadfile.hpp include/bfinstlist.hpp include/bfinst.hpp
 	${CXX} -c -o bfreadfile.o bfreadfile.cpp
+absinst.o : absinst.cpp include/absinst.hpp
+	${CXX} -c -o absinst.o absinst.cpp
 main.o : main.cpp include/bfreadfile.hpp include/bfinstlist.hpp include/bfinst.hpp
 	${CXX} -c -o main.o main.cpp
 
